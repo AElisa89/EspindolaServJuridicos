@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap'); /*iMPORTO GOOGLE FONT*/
+
+
+/*DECLARO VARIABLES*/
+:root{
+
+    /*font family*/
+    --font-principal: 'Jost', sans-serif;
+    --text-color: #050505;
+
+
+    /*font size*/
+    --text-large: 5.2em;
+    --text-medium: 2.2em;
+    --text-base: 1.6em;
+    --text-small: 1.4em;
+
+    /*spacing*/
+    --spacing-large: 6rem;
+    --spacing-medium: 4rem;
+    --spacing-small: 2rem;
+    --spacing-xsmall: 1rem;
+
+
+
+    /*colors*/
+    --primary:#030303;
+    --secondary: #342abba9;
+    --alternative: #615f83a9;
+
+}
+
+
+
+
+/*---------------ESTILOS GLOBALES-----------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: var(--font-principal);
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    font-family: var(--font-principal); /*DECLARAR MÁS TIPOS DE LETRA*/
+    color: var(--text-color);
+
+}
+
+img{
+    width: 100%;
+}
+
+
+
+
+/*--------------HEADER-----------*/
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: var(--spacing-small);
+    border-bottom: 2px solid var(--primary);
+}
+
+
+.header__img{
+    max-width: 400px;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__link{
+    font-size: var(--text-medium);
+    padding: var(--spacing-small);
+    border: 2px solid white;
+    transition: all 1s;
+}
+
+.menu__link:hover{
+    border-color: var(--secondary);
+}
+
+
+/*-----------BODY INDEX------------*/
+
+.main{
+    max-width: 1200px;
+    margin: 5rem auto;
+}
+
+.abogados{
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-medium);
+    flex-wrap: wrap;
+}
+
+.bio{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 clamp(300px, 30%, 400px);
+}
+
+h1{
+    font-size: var(--text-medium);
+}
+
+
