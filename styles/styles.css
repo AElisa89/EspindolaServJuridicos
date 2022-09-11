@@ -66,6 +66,7 @@ img{
 
 
 
+
 /*--------------HEADER-----------*/
 
 header {
@@ -74,11 +75,13 @@ header {
     align-items: center;
     padding: var(--spacing-small);
     border-bottom: 2px solid var(--primary);
+
 }
 
 
 .header__img{
     max-width: 400px;
+
 }
 
 .menu{
@@ -98,7 +101,7 @@ header {
 }
 
 
-/*-----------BODY INDEX------------*/
+/*-----------BODY ------------*/
 
 .main{
     max-width: 1200px;
@@ -123,3 +126,4 @@ h1{
 }
 
 
+/*--------FORM CONTACTO----------*/
