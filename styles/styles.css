@@ -25,7 +25,7 @@
 
     /*colors*/
     --primary:#030303;
-    --secondary: #342abba9;
+    --secondary: #2117aaa9;
     --alternative: #615f83a9;
 
 }
@@ -46,6 +46,7 @@ html{
 
 body{
     font-family: var(--font-principal);
+    
 }
 
 ul{
@@ -59,18 +60,32 @@ a{
 
 }
 
-img{
-    width: 100%;
+
+
+.container{
+    display:grid;
+    grid-template-areas: 
+    "header header header"
+    "aside main main"
+    "aside main main"
+    "footer footer footer"
+    ;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    grid-template-columns: 20% auto 15%;
+    height: 100vh;
+    row-gap: 10px;
+    column-gap: 10px; /*Espacio entre elem de la grilla*/
+    
+    
+    
 }
-
-
-
 
 
 /*--------------HEADER-----------*/
 
 header {
     display: flex;
+    grid-area: header;
     justify-content: space-around;
     align-items: center;
     padding: var(--spacing-small);
@@ -103,10 +118,26 @@ header {
 
 /*-----------BODY ------------*/
 
-.main{
-    max-width: 1200px;
+
+
+.main {
+    grid-area: main;
+    /*max-width: 1200px;
     margin: 5rem auto;
+    display: flex;*/
+    justify-content: space-between;
+   
 }
+
+.aside{
+    grid-area: aside;
+}
+
+.footer{
+    grid-area: footer;
+    font-size: var(--text-medium);
+}
+
 
 .abogados{
     display: flex;
@@ -127,3 +158,100 @@ h1{
 
 
 /*--------FORM CONTACTO----------*/
+.formContacto{
+    font-size: var(--text-medium);
+}
+
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERY --> ESTABLEZCO ESTILOS PARA MOBILE
+-----Breakpooints--------
+320px --> cel vert
+480px --> cel hor
+600px --> tabl peq vert
+768px y 1023px --> tab gde vert
+1024px --> tab gde horiz / net / desktop
+1200px --> pan
+*/
+
+
+/*MOBILE VERTICAL*/
+@media screen and (max-width: 480px) and (orientation: portrait) {
+    .container{
+          grid-template-areas:
+          "header"
+          "aside"
+          "main"
+          "footer";
+          grid-template-rows: repeat(4, 1fr);
+          grid-template-columns: 1fr;
+          height: 100vh;
+          row-gap: 0px;
+          column-gap: 0px; 
+          
+          }
+   
+  .header, .main, .aside, .footer {
+      font-size: 40px;
+  }
+
+  .header {
+      flex-direction: column;
+  }
+}
+
+
+/*MOBILE HORIZONTAL*/
+@media screen and (max-width: 480px) and (orientation: landscape) {
+  .container{
+      grid-template-areas:
+      "header header"
+      "aside main"
+      "aside main"
+      "footer footer";          
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+      height: 100vh;
+      row-gap: 0px;
+      column-gap: 0px; 
+      
+      }
+
+      .header {
+        flex-direction: column;
+    }
+}
+
+
+
+
+/*TABLET*/
+@media screen and (min-width: 481px) and (max-width: 1200px) {
+
+  .container{
+        grid-template-areas:
+        "header header"
+        "aside main"
+        "aside main"
+        "footer footer";          
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        height: 100vh;
+        row-gap: 0px;
+        column-gap: 0px; 
+        
+        }
+
+        .header {
+          flex-direction: column;
+      }
+ 
+
+}
