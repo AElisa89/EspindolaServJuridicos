@@ -6,15 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/icono.jpg">
     <link rel="stylesheet" href="./styles/styles.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>Inicio</title>
 </head>
 
 
-<body class="container">
  
+    <body class="container-fluid">
 
-<!----------------INICIO HEADER-------------->
-    <header class="header">
+        <!-- INICIO HEADER EN FILA 1-->
+        <section class="row">
+            <section class="col-12">
+                <header class="header">
+                    <picture class="header__logo">
+                        <img class="header__img" src="../images/favicon.png" alt="Imagen logo">
+                    </picture>
+                </header>
+            </section>
+        </section>
+        <!-- HEADER -->
+       
+
+        <!-- fila 2 NAV -->
+        <section class="row">
+             <section class="col">
+                    <nav class="navigation">
+                        <ul class="menu">
+                            <li class="menu__item"> <a class="menu__link" href="./index.html">Inicio</a></li>
+                            <li class="menu__item"> <a class="menu__link" href="./pages/quienesSomos.html" > Quiénes Somos</a></li>
+                            <li class="menu__item"> <a class="menu__link" href="./pages/profesionales.html" > Profesionales </a></li>
+                            <li class="menu__item"> <a class="menu__link" href="./pages/areas.html" > Áreas </a></li>
+                            <li class="menu__item"> <a class="menu__link" href="./pages/contacto.html"> Contacto </a></li> 
+                        </ul>
+            
+                     </nav>
+             </section>
+        </section>
+        
+
+        <!-- fila 3: SITIOS RELACIONADOS Y ART PPAL-->
+        <section class="row">
+            
+
+
+            <section class="col-sm-12 col-md-6 col-lg-4"> <!--CONDICIONES PARA EL RESPONSIVE -->
+                <div class="card">
+                    <img src="./images/fondos/agreement.jpg" alt="foto de fondo" />
+                <div class="card-body">
+                    <h5 class="card-title">Sitios de interés</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quae eveniet necessitatibus quasi voluptatem eligendi unde incidunt magni. Perspiciatis veniam adipisci totam error libero exercitationem non corrupti accusantium laudantium quam.</p>
+
+            </section>
+      
+
+          
+            <section class="col-sm-12 col-md-6 col-lg-8">
+                <div class="card">
+                   <img src="./images/fondos/laboral.jpg" alt="foto de fondo" />
+                <div class="card-body">
+                    <h5 class="card-title">Principal</h5>
+                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit architecto nihil ad adipisci aliquid quaerat, harum alias sit error officiis impedit odio molestiae rerum beatae aliquam vero fugit ratione laudantium.</p>
+            </section>
+
+        </section>    
+
+
+<!----------------INICIO HEADER Y COD ANTERIOR-------------
+    <header class="header ">
         <picture class="header__logo">
             <img class="header__img" src="./images/favicon.png" alt="Imagen logo">
         </picture>
@@ -31,7 +90,7 @@
         </nav>
     </header>
 
-<!--------------FIN HEADER------------------->    
+------------FIN HEADER------------------- 
 <aside class="aside">
     <article class="relacionados">SITIOS RELACIONADOS</article>
 </aside>
@@ -55,8 +114,12 @@
         <img src="./images/twitter.jpg" alt="logo twitter" width="40px" height="40px">
     </a>
 </footer>
+-->
 
 
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 
 </html>

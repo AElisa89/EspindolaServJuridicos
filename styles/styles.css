@@ -109,10 +109,11 @@ header {
     padding: var(--spacing-small);
     border: 1px solid white;
     transition: all 0.5s;
+    text-decoration: none;
 }
 
 .menu__link:hover{
-    border-color: var(--secondary);
+    /*border-color: var(--secondary);*/
     color: var(--secondary);
     font-weight: bold;
 }
@@ -141,19 +142,19 @@ header {
 }
 
 
-.abogados{
+/*.abogados{
     display: flex;
     justify-content: space-evenly;
     
 
-}
+}*/
 
-.bio{
+/*.bio{
    display: flex;
    justify-content:center;
    flex-direction: column;
    
-}
+}*/
 
 
 
